@@ -8,7 +8,7 @@ import {
   Keyboard,
 } from "react-native";
 
-export const LoginScreen = ({ keyboardShown }) => {
+ const LoginScreen = ({ keyboardShown }) => {
   const [email, setEmail] = useState(null);
   const [password, setPassword] = useState(null);
 
@@ -109,3 +109,5 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
 });
+
+export default LoginScreen;

@@ -5,17 +5,19 @@ import {
   View,
   TextInput,
   TouchableOpacity,
-  Keyboard,
   Image,
+  Keyboard,
 } from "react-native";
-
+// import _default from "react-native-gesture-handler/lib/typescript/components/GestureHandlerButton";
+// import Icon from "react-native-vector-icons/EvilIcons";
 
 export const RegistrationScreen = ({ keyboardShown }) => {
   const [login, setLogin] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [isReady, setIsReady] = useState(false);
+
   const [showPassword, setShowPassword] = useState(false);
+
   const handleTogglePassword = () => {
     setShowPassword((prevState) => !prevState);
   };
@@ -39,6 +41,7 @@ export const RegistrationScreen = ({ keyboardShown }) => {
   const handlePassword = (text) => {
     setPassword(text);
   };
+
   return (
     <View
       style={{
@@ -47,12 +50,11 @@ export const RegistrationScreen = ({ keyboardShown }) => {
         marginBottom: keyboardShown ? -150 : 0,
       }}
     >
-        
       <View style={styles.avatarThumb}>
-      <Image
-                  source={require('../assets/add.png')}
-                  style={styles.imgAddPhoto}
-                ></Image>
+        <Image
+          source={require("../assets/add.png")}
+          style={styles.imgAddPhoto}
+        ></Image>
       </View>
       <Text style={styles.authTitle}>Реєстрація</Text>
 
@@ -76,11 +78,15 @@ export const RegistrationScreen = ({ keyboardShown }) => {
         value={password}
       />
       <TouchableOpacity
-                style={styles.buttonPassword}
+        style={styles.buttonPassword}
         activeOpacity={0.7}
-        onPress={handleTogglePassword}>
-                <Text style={styles.buttonText}> {showPassword ? "Приховати" : "Показати"}</Text>
-              </TouchableOpacity>
+        onPress={handleTogglePassword}
+      >
+        <Text style={styles.buttonText}>
+          {" "}
+          {showPassword ? "Приховати" : "Показати"}
+        </Text>
+      </TouchableOpacity>
       <TouchableOpacity style={styles.submitButton} onPress={onRegSubmit}>
         <Text style={styles.submitButtonText}>Зареєстуватися</Text>
       </TouchableOpacity>
@@ -106,6 +112,13 @@ const styles = StyleSheet.create({
     marginTop: -60,
     marginLeft: "auto",
     marginRight: "auto",
+  },
+  imgAddPhoto: {
+    position: "absolute",
+    width: 25,
+    height: 25,
+    top: 81,
+    right: -12.5,
   },
 
   authTitle: {
@@ -158,21 +171,16 @@ const styles = StyleSheet.create({
   buttonText: {
     fontSize: 16,
     lineHeight: 19,
-    textAlign: 'center',
-    color: '#1B4371',
+    textAlign: "center",
+    color: "#1B4371",
   },
   buttonPassword: {
-     position: 'absolute',
-     paddingVertical: 17,
-     right:6,
-     top: 278,
-     marginRight: 16,
-  },
-    imgAddPhoto: {
-    position: 'absolute',
-    width: 25,
-    height: 25,
-    top: 81,
-    right: -12.5,
+    position: "absolute",
+    paddingVertical: 17,
+    right: 6,
+    top: 278,
+    marginRight: 16,
   },
 });
+
+export default RegistrationScreen;
