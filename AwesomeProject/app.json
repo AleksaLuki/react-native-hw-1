@@ -21,56 +21,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.aleksaluki.AwesomeProject"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "43d97496-3b67-4904-98fd-ad7c2167190d"
+      }
     }
   }
 }
-
-
-// {
-//   "expo": {
-//     "name": "AwesomeProject",
-//     "slug": "AwesomeProject",
-//     "version": "1.0.0",
-//     "orientation": "portrait",
-//     "icon": "./assets/icon.png",
-//     "userInterfaceStyle": "light",
-//     "jsEngine": "hermes",
-//     "splash": {
-//       "image": "./assets/splash.png",
-//       "resizeMode": "contain",
-//       "backgroundColor": "#ffffff"
-//     },
-//     "assetBundlePatterns": [
-//       "**/*"
-//     ],
-//     "ios": {
-//       "supportsTablet": true,
-//       "jsEngine": "jsc",
-//       "permissions": {
-//         "infoPlist": {
-//           "NSAppTransportSecurity": {
-//             "NSAllowsArbitraryLoads": true
-//           }
-//         }
-//       }
-//     },
-  
-//     "android": {
-//       "adaptiveIcon": {
-//         "foregroundImage": "./assets/adaptive-icon.png",
-//         "backgroundColor": "#ffffff"
-//       },
-//       "permissions": [
-//         "INTERNET"
-//       ],
-//       "jsEngine": "jsc"
-//     },
-//     "web": {
-//       "favicon": "./assets/favicon.png"
-//     }
-//   }
-// }
